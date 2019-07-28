@@ -43,7 +43,7 @@
         animation: 100
       });
     }
-    console.log(cardContainer)
+    // console.log(cardContainer)
     cardContainer.forEach((c) => {
       Sortable.create(c, {
         group: 'cardList',
