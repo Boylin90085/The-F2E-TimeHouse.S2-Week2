@@ -10,7 +10,12 @@
   function newGame() {
     let tempHTML = ''
     let poker = shuffle(generatePoker())
+
     cardSection.innerHTML = ''
+    cardContainer.forEach((c) => {
+      c.innerHTML = ''
+    })
+
     for(let i = 0; i < 8; i++) {
       if (i <= 3) {
         let cardList = ''
