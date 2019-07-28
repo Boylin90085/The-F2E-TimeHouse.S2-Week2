@@ -1,6 +1,7 @@
 (function () {
   const cardSection = document.querySelector('.card-section')
   const newGameBtn = document.querySelector('.new')
+  const cardContainer = document.querySelectorAll('.card-container__item')
 
   newGame()
   newGameBtn.addEventListener('click', newGame)
@@ -34,7 +35,6 @@
         </div>
         `
       }
-      console.log(poker)
     }
     cardSection.innerHTML += tempHTML
     for(let i = 1; i <= 8; i++) {
@@ -43,6 +43,14 @@
         animation: 100
       });
     }
+    console.log(cardContainer)
+    cardContainer.forEach((c) => {
+      Sortable.create(c, {
+        group: 'cardList',
+        filter: '.bg',
+        animation: 100
+      });
+    })
   }
 
   // 創造撲克牌的 DOM

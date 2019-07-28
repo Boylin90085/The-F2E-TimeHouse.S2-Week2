@@ -146,12 +146,22 @@ ul{
     margin-right: 30px;
   }
   &__item{
+    position: relative;
     @extend %card;
     background-color: #D9E3A5;
-  }
-  span[class^="icon-"]{
-    font-size: 33px;
-    color: #F2FCBD;
+    >span[class^="icon-"]{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 33px;
+      color: #F2FCBD;
+    }
+    .card{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 }
 

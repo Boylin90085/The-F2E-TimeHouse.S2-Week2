@@ -54,9 +54,11 @@ ul { list-style: none; padding-left: 0px; margin: 0; }
 
 .card-container__item:not(:last-child) { margin-right: 30px; }
 
-.card-container__item { background-color: #D9E3A5; }
+.card-container__item { position: relative; background-color: #D9E3A5; }
 
-.card-container span[class^="icon-"] { font-size: 33px; color: #F2FCBD; }
+.card-container__item > span[class^="icon-"] { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 33px; color: #F2FCBD; }
+
+.card-container__item .card { position: absolute; top: 0; left: 0; }
 
 .info { margin: 0px 19px; text-align: center; color: #fff; font-weight: 700; letter-spacing: 1.5px; }
 
